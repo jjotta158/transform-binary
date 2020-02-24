@@ -1,0 +1,95 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+header{
+    width:100%;
+    height:15vmin;
+    background:linear-gradient(to right, #17AEBF 50%, white 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#081826;
+    font-family: "Poppins";
+    transition: all .4s;
+}
+h1{
+    padding:0.5vmin;
+    background-color:white;
+    border-radius:2vmin;
+    padding-left: 10vmin;
+    padding-right: 10vmin;
+    box-shadow: 2px 2px 2px 2px rgba(143, 138, 138, 0.2);
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+section{
+    width:50%;
+    height:85vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #17AEBF;
+}
+section:last-child{
+    background-color:white;
+}
+form{
+    background-color:white;
+    padding:10vmin;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5vmin;
+    box-shadow: 2px 2px 2px 2px rgba(143, 138, 138, 0.2);
+}
+input{
+    width:50vmin;
+    height: 20vmin;
+    margin-bottom:5vmin;
+    border:1vmin solid #17AEBF;
+    color:#17AEBF;
+    font-size: 10vmin;
+    text-align: center;
+    border-radius:4vmin;
+}
+button{
+    background-color: #17AEBF;
+    height:10vmin;
+    color:white;
+    font-size: 5vmin;
+    font-weight: bolder;
+    border-radius: 2vmin;
+}
+#showConvertedNumber{
+    color:#17AEBF;
+    font-family: "Poppins";
+    font-size: 10vmin;
+    padding:5vmin;
+}
+@media(max-width:600px)
+{
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    section{
+        width:100vmin;
+        height:80vmin;
+    }
+    section:first-child{
+        background-color: white;
+    }
+    section:last-child{
+        background-color:#17AEBF;
+    }
+    #showConvertedNumber{
+        color:white;
+        font-family: "Poppins";
+        font-size: 10vmin;
+    }
+}
