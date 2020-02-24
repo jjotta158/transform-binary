@@ -1,12 +1,20 @@
-var switchi = 0;
-const vm = new Vue({
-    el:'#app',
+
+var vm = new Vue({
+    el:"#app",
     data:{
-        
+        convert:true
     }   
 })
 
+function headerClick(){
+    if(vm.convert) {
+        vm.convert = false;
+    } else {
+        vm.convert = true;
+    }
+}
 function convertToDecimal() {
+    animation();
     let input = document.getElementById("input").value;
     let inputCount = input.split("");
     let i = 0;
@@ -15,12 +23,12 @@ function convertToDecimal() {
         resultado = resultado + parseInt(inputCount[i]) * Math.pow(2,i);
         i++;
     }
-    animation();
     let resposta = document.getElementById("showConvertedNumber") ;
     resposta.innerText = resultado;
 }
 
 function convertToBinary(){
+    animation();
     let input = document.getElementById("input").value;
     let resultado = "";
     let div = input;
@@ -28,7 +36,6 @@ function convertToBinary(){
         resultado = `${resultado} ${div %2 }`;
         div = Math.trunc(div/2);                   
     }
-    animation();
     let resposta = document.getElementById("showConvertedNumber") ;
     resposta.innerText = resultado;
 }
@@ -41,4 +48,12 @@ function animation(){
     setTimeout(()=>{
         menu.style.height = "15vmin";
     }, 1000);
+}
+
+function convert(){
+    if(vm.convert) {
+        convertToBinary()
+    } else {
+        convertToDecimal()
+    }
 }
